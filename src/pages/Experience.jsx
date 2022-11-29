@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 
@@ -24,11 +25,28 @@ const Experience = () => {
   }, [setUserData]);
   console.log("userData", userData);
   return (
-    <div>
-      {userData.map((items, index) => {
-        return items.experience1;
-      })}
-    </div>
+    <>
+      <Typography variant="h2" fontWeight={600} ml={75}>
+        Experience
+      </Typography>
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          height: "80vh",
+        }}
+      >
+        {userData.map((items, index) => (
+          <>
+            <Typography fontWeight={600}>{items.experience1}</Typography>
+            <Typography fontWeight={600}>{items.experience2}</Typography>
+          </>
+        ))}
+      </div>
+    </>
   );
 };
 

@@ -11,7 +11,7 @@ const Navbar = () => {
             <Typography
               variant="h5"
               component="div"
-              sx={{ flexGrow: 1, textTransform: "uppercase" }}
+              sx={{ flexGrow: 1, textTransform: "uppercase", fontWeight: 600 }}
             >
               Portfolio Dashboard
             </Typography>
